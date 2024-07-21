@@ -16,6 +16,9 @@
     <Filter Include="Source Files\1_testStuff">
       <UniqueIdentifier>{f31559fa-4ad9-48f8-a099-a02c9408351c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\log-levels">
+      <UniqueIdentifier>{df61b845-aae3-4e1e-bfec-cc72d156aac3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="numberFunctions.cpp">
@@ -23,6 +26,9 @@
     </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="log_levels.cpp">
+      <Filter>Source Files\log-levels</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
