@@ -42,6 +42,6 @@ namespace log_line {
     /// <returns>A string containing logs message, then the log level in parentheses</returns> 
     std::string reformat(std::string line) {
         // return the reformatted message
-        return "";
+        return message(line) + " (" + log_level(line) + ")";
     }
 }
