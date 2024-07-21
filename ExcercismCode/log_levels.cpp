@@ -5,7 +5,7 @@
 namespace log_line {
     std::string message(std::string line) {
         // return the message
-        return "";
+        return "hello world";
     }
 
     std::string log_level(std::string line) {
