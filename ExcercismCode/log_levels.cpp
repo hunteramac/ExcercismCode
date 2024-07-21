@@ -5,7 +5,9 @@
 namespace log_line {
     std::string message(std::string line) {
         // return the message
-        return "hello world";
+        const std::string LINE_DELIMITER = "]: ";
+        int Index_MessageStart = line.find(LINE_DELIMITER)+LINE_DELIMITER.size();
+        return line.substr(Index_MessageStart, std::string::npos);
     }
 
     std::string log_level(std::string line) {
