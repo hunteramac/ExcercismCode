@@ -22,6 +22,9 @@
     <Filter Include="Source Files\lasagna">
       <UniqueIdentifier>{e3311f02-951c-4b44-88d0-34ca038686cf}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\freelancer">
+      <UniqueIdentifier>{fdfd5587-b3c1-421d-9fe7-38eb29b971b9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="numberFunctions.cpp">
@@ -35,6 +38,9 @@
     </ClCompile>
     <ClCompile Include="lasagna.cpp">
       <Filter>Source Files\lasagna</Filter>
+    </ClCompile>
+    <ClCompile Include="freelancer_rates.cpp">
+      <Filter>Source Files\freelancer</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
