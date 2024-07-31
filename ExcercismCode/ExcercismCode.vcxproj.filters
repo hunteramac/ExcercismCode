@@ -25,6 +25,9 @@
     <Filter Include="Source Files\freelancer">
       <UniqueIdentifier>{fdfd5587-b3c1-421d-9fe7-38eb29b971b9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\last_will">
+      <UniqueIdentifier>{33cb580d-43fa-4806-9d21-fad4f411877e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="numberFunctions.cpp">
@@ -41,6 +44,9 @@
     </ClCompile>
     <ClCompile Include="freelancer_rates.cpp">
       <Filter>Source Files\freelancer</Filter>
+    </ClCompile>
+    <ClCompile Include="last_will.cpp">
+      <Filter>Source Files\last_will</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
