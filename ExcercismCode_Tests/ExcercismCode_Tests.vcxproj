@@ -47,6 +47,9 @@
     <ClCompile Include="Test_FreeLancer.cpp" />
     <ClCompile Include="Test_Lasagna.cpp" />
     <ClCompile Include="Test_LogLevels.cpp" />
+    <ClCompile Include="Test_MakingTheGrade.cpp" />
+    <ClCompile Include="Test_PacmanRules.cpp" />
+    <ClCompile Include="Test_VehiclePurchase.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ExcercismCode\ExcercismCode.vcxproj">

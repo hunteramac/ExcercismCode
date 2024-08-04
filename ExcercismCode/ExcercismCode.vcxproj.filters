@@ -28,6 +28,9 @@
     <Filter Include="Source Files\last_will">
       <UniqueIdentifier>{33cb580d-43fa-4806-9d21-fad4f411877e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Pacman Rules">
+      <UniqueIdentifier>{67089d3a-e91a-4a0d-85bf-cb22e8a9b42d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="numberFunctions.cpp">
@@ -47,6 +50,15 @@
     </ClCompile>
     <ClCompile Include="last_will.cpp">
       <Filter>Source Files\last_will</Filter>
+    </ClCompile>
+    <ClCompile Include="pacman_rules.cpp">
+      <Filter>Source Files\Pacman Rules</Filter>
+    </ClCompile>
+    <ClCompile Include="vehicle_purchase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="making_the_grade.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
