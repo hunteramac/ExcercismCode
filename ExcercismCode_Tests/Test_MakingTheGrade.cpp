@@ -69,3 +69,70 @@ TEST(MakingTheGrade, AboveThreshold_3) {
 
 	EXPECT_EQ(above_threshold(Input, 75), ExpectedResult);
 }
+
+
+TEST(MakingTheGrade, LetterGradeSpecialCase) {
+	//higher then 100
+	std::array<int, 4> expect100Spread({ 41, 56, 71, 86 });
+	std::array<int, 4> expectLowSpread({ 41, 41, 41, 41 });
+
+	EXPECT_EQ(
+		letter_grades(1000),
+		expect100Spread
+	);
+
+	//negative
+	EXPECT_EQ(
+		letter_grades(-1000),
+		expectLowSpread
+	);
+
+	//zero
+	EXPECT_EQ(
+		letter_grades(0),
+		expectLowSpread //can't remember/don't know if I canS how to initialize this with r value (no name)
+	);
+}
+TEST(MakingTheGrade, LetterGrade) {
+	
+	std::array<int, 4> expect100Spread({ 41, 56, 71, 86 });
+	EXPECT_EQ(
+		letter_grades(100),
+		expect100Spread
+	);
+
+	std::array<int, 4> expect88Spread({ 41, 53, 65, 77 });
+	EXPECT_EQ(
+		letter_grades(88),
+		expect88Spread
+	);
+}
+
+TEST(MakingTheGrade, StudentRanking_MethodCompile) {
+	std::vector<int> StudentScores = { 0 };
+	std::vector<std::string> StudentNames = { "Dummy" };
+	student_ranking(StudentScores, StudentNames);
+}
+
+TEST(MakingTheGrade, StudentRanking_1Entry) {
+	std::vector<int> StudentScores = { 80 };
+	std::vector<std::string> StudentNames = { "Otto Bild" };
+	EXPECT_EQ(
+		student_ranking(StudentScores, StudentNames),
+		std::vector<std::string>({
+			"1 Otto Bild 80"
+		})
+	);
+}
+
+TEST(MakingTheGrade, StudentRanking_MultiEntry) {
+	std::vector<int> StudentScores = { 80, 65};
+	std::vector<std::string> StudentNames = { "Otto Bild" , "Samwise Gamgee"};
+	EXPECT_EQ(
+		student_ranking(StudentScores, StudentNames),
+		std::vector<std::string>({
+			"1 Otto Bild 80",
+			"2 Samwise Gamgee 65"
+			})
+	);
+}
