@@ -125,7 +125,7 @@ TEST(MakingTheGrade, StudentRanking_1Entry) {
 	);
 }
 
-TEST(MakingTheGrade, StudentRanking_MultiEntry) {
+TEST(MakingTheGrade, StudentRanking_MultiEntry_Ordered) {
 	std::vector<int> StudentScores = { 80, 65};
 	std::vector<std::string> StudentNames = { "Otto Bild" , "Samwise Gamgee"};
 	EXPECT_EQ(
@@ -134,5 +134,25 @@ TEST(MakingTheGrade, StudentRanking_MultiEntry) {
 			"1 Otto Bild 80",
 			"2 Samwise Gamgee 65"
 			})
+	);
+}
+
+TEST(MakingTheGrade, PerfectScore_NoPerectScores) {
+	std::vector<int> StudentScores = { 75};
+	std::vector<std::string> StudentNames = { "Otto Bild" };
+	
+	EXPECT_EQ(
+		perfect_score(StudentScores, StudentNames),
+		""
+	);
+}
+
+TEST(MakingTheGrade, PerfectScore_OnePerfect) {
+	std::vector<int> StudentScores = { 100 };
+	std::vector<std::string> StudentNames = { "Tom Badger-tail" };
+
+	EXPECT_EQ(
+		perfect_score(StudentScores, StudentNames),
+		"Tom Badger-tail"
 	);
 }
