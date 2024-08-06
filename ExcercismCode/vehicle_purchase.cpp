@@ -20,6 +20,7 @@ std::string choose_vehicle(std::string VehicleOptionA, std::string VehicleOption
 		return VehicleOptionB + append;
 }
 
+//Something buggy here
 double calculate_resell_price(double originalVehiclePrice, int vehicleAge) {
 	if (vehicleAge == 0)
 		return originalVehiclePrice;
@@ -29,4 +30,6 @@ double calculate_resell_price(double originalVehiclePrice, int vehicleAge) {
 		return originalVehiclePrice * .7;
 	else if(vehicleAge>=10)
 		return originalVehiclePrice*.5;
+
+	return 0;
 }
