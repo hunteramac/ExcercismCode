@@ -1,12 +1,12 @@
 #include "pch.h"
 #include "../ExcercismCode/making_the_grade.cpp"
 
-
+namespace MakingTheGrade {
 TEST(MakingTheGrade, RoundDownScores_Simple) {
 	//arrange
 	std::vector<double> Input = { 0.0 };
 	std::vector<int> Expected_Output = { 0 };
-	
+
 	//assert
 	EXPECT_EQ(
 		round_down_scores(Input),
@@ -16,7 +16,7 @@ TEST(MakingTheGrade, RoundDownScores_Simple) {
 
 TEST(MakingTheGrade, RoundDownScores_1) {
 	//arrange
-	std::vector<double> Input = { 75.5 , 99.99};
+	std::vector<double> Input = { 75.5 , 99.99 };
 	std::vector<int> Expected_Output = { 75, 99 };
 
 	//assert
@@ -28,7 +28,7 @@ TEST(MakingTheGrade, RoundDownScores_1) {
 
 TEST(MakingTheGrade, RoundDownScores_2) {
 	//arrange
-	std::vector<double> Input = { 15.3333, 5.0001, 100.5};
+	std::vector<double> Input = { 15.3333, 5.0001, 100.5 };
 	std::vector<int> Expected_Output = { 15, 5 , 100 };
 
 	//assert
@@ -58,13 +58,13 @@ TEST(MakingTheGrade, AboveThreshold_1) {
 }
 
 TEST(MakingTheGrade, AboveThreshold_2) {
-	std::vector<int> Input = {100};
+	std::vector<int> Input = { 100 };
 
 	EXPECT_EQ(above_threshold(Input, 0), std::vector<int> {100});
 }
 
 TEST(MakingTheGrade, AboveThreshold_3) {
-	std::vector<int> Input = { 50, 100, 60 , 80, 75};
+	std::vector<int> Input = { 50, 100, 60 , 80, 75 };
 	std::vector<int> ExpectedResult = { 100, 80, 75 };
 
 	EXPECT_EQ(above_threshold(Input, 75), ExpectedResult);
@@ -94,14 +94,11 @@ TEST(MakingTheGrade, LetterGradeSpecialCase) {
 	);
 }
 TEST(MakingTheGrade, LetterGrade) {
-	
-	std::array<int, 4> expect100Spread({ 41, 56, 71, 86 });
-	EXPECT_EQ(
-		letter_grades(100),
-		expect100Spread
-	);
 
-	std::array<int, 4> expect88Spread({ 41, 53, 65, 77 });
+	std::array<int, 4> expect100Spread{ 41, 56, 71, 86 };
+	EXPECT_EQ(letter_grades(100), expect100Spread);
+
+	std::array<int, 4> expect88Spread{ 41, 53, 65, 77 };
 	EXPECT_EQ(
 		letter_grades(88),
 		expect88Spread
@@ -121,13 +118,13 @@ TEST(MakingTheGrade, StudentRanking_1Entry) {
 		student_ranking(StudentScores, StudentNames),
 		std::vector<std::string>({
 			"1 Otto Bild 80"
-		})
+			})
 	);
 }
 
 TEST(MakingTheGrade, StudentRanking_MultiEntry_Ordered) {
-	std::vector<int> StudentScores = { 80, 65};
-	std::vector<std::string> StudentNames = { "Otto Bild" , "Samwise Gamgee"};
+	std::vector<int> StudentScores = { 80, 65 };
+	std::vector<std::string> StudentNames = { "Otto Bild" , "Samwise Gamgee" };
 	EXPECT_EQ(
 		student_ranking(StudentScores, StudentNames),
 		std::vector<std::string>({
@@ -138,9 +135,9 @@ TEST(MakingTheGrade, StudentRanking_MultiEntry_Ordered) {
 }
 
 TEST(MakingTheGrade, PerfectScore_NoPerectScores) {
-	std::vector<int> StudentScores = { 75};
+	std::vector<int> StudentScores = { 75 };
 	std::vector<std::string> StudentNames = { "Otto Bild" };
-	
+
 	EXPECT_EQ(
 		perfect_score(StudentScores, StudentNames),
 		""
@@ -156,3 +153,5 @@ TEST(MakingTheGrade, PerfectScore_OnePerfect) {
 		"Tom Badger-tail"
 	);
 }
+
+};
