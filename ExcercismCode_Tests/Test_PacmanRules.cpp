@@ -2,12 +2,12 @@
 
 #include "../ExcercismCode/pacman_rules.cpp"
 
-//is there a way to group tests by method?
+namespace Pacman {
 TEST(Pacman, CanEatGhost) {
 	//it should
 	//return true if power pellet and ghost contact
 	EXPECT_EQ(
-		can_eat_ghost(true,true),
+		can_eat_ghost(true, true),
 		true
 	);
 
@@ -50,7 +50,7 @@ TEST(Pacman, Scored1) {
 }
 
 TEST(Pacman, Lost) {
-	
+
 
 	EXPECT_EQ(lost(false, false), false);
 
@@ -59,13 +59,13 @@ TEST(Pacman, Lost) {
 		true
 	);
 
-	EXPECT_EQ(lost(true, false),false);
+	EXPECT_EQ(lost(true, false), false);
 	EXPECT_EQ(lost(true, true), false);
 }
 
 TEST(Pacman, Win) {
 	//enumerating all combinations like this is not particularly efficent
-	
+
 	//can see input boundaries (to avoid enumerating all cases)
 	//power pellet + eaten all dots enables contact ghost true to not = false
 	EXPECT_EQ(
@@ -105,4 +105,5 @@ TEST(Pacman, Win) {
 		false
 	);
 	//
+}
 }

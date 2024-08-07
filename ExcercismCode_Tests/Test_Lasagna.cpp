@@ -1,7 +1,7 @@
 #include "pch.h"
 
 #include "../ExcercismCode/lasagna.cpp"
-
+namespace Lasagna {
 TEST(Lasagna, OvenTime) {
 	EXPECT_EQ(ovenTime(), 40);
 }
@@ -28,4 +28,5 @@ TEST(Lasagna, PrepTime2) {
 
 TEST(Lasagna, ElapsedTime1) {
 	EXPECT_EQ(elapsedTime(3, 20), 26);
+}
 }
