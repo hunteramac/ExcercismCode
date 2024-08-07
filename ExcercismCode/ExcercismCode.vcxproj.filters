@@ -31,6 +31,9 @@
     <Filter Include="Source Files\Pacman Rules">
       <UniqueIdentifier>{67089d3a-e91a-4a0d-85bf-cb22e8a9b42d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="vehiclePurchase">
+      <UniqueIdentifier>{44800b99-ce8a-43e4-af0c-20b04573dfe8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="numberFunctions.cpp">
@@ -54,11 +57,16 @@
     <ClCompile Include="pacman_rules.cpp">
       <Filter>Source Files\Pacman Rules</Filter>
     </ClCompile>
-    <ClCompile Include="vehicle_purchase.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="making_the_grade.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="vehicle_purchase.cpp">
+      <Filter>vehiclePurchase</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="vehicle_purchase.h">
+      <Filter>vehiclePurchase</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

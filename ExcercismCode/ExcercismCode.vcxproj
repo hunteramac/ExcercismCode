@@ -137,6 +137,9 @@
     <ClCompile Include="pacman_rules.cpp" />
     <ClCompile Include="vehicle_purchase.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="vehicle_purchase.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
