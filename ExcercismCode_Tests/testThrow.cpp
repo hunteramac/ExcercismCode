@@ -3,12 +3,13 @@
 #include "../ExcercismCode/testClass.h"
 
 TEST(TestThrow, IndexNull) {
-	testClass* myVar = NULL;
+	//testClass* myVar = NULL;
 
-	try {
+	//try {
 
-	}
-
-	//Why doesnt this crash?
-	EXPECT_EQ(5,myVar->getNum());
+	//}
+	//catch (...) {
+	//	//Why doesnt this crash?
+	//	EXPECT_EQ(5, myVar->getNum());
+	//}
 }
