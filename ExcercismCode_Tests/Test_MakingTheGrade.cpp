@@ -105,13 +105,13 @@ TEST(MakingTheGrade, LetterGrade) {
 	);
 }
 
-TEST(MakingTheGrade, StudentRanking_MethodCompile) {
+TEST(StudentRanking, MethodCompile) {
 	std::vector<int> StudentScores = { 0 };
 	std::vector<std::string> StudentNames = { "Dummy" };
 	student_ranking(StudentScores, StudentNames);
 }
 
-TEST(MakingTheGrade, StudentRanking_1Entry) {
+TEST(StudentRanking, 1Entry) {
 	std::vector<int> StudentScores = { 80 };
 	std::vector<std::string> StudentNames = { "Otto Bild" };
 	EXPECT_EQ(
@@ -122,7 +122,7 @@ TEST(MakingTheGrade, StudentRanking_1Entry) {
 	);
 }
 
-TEST(MakingTheGrade, StudentRanking_MultiEntry_Ordered) {
+TEST(StudentRanking, MultiEntryOrdered) {
 	std::vector<int> StudentScores = { 80, 65 };
 	std::vector<std::string> StudentNames = { "Otto Bild" , "Samwise Gamgee" };
 	EXPECT_EQ(
@@ -130,6 +130,19 @@ TEST(MakingTheGrade, StudentRanking_MultiEntry_Ordered) {
 		std::vector<std::string>({
 			"1 Otto Bild 80",
 			"2 Samwise Gamgee 65"
+			})
+	);
+}
+
+TEST(StudentRanking, MultiEntryUnordered) {
+	std::vector<int> StudentScores = { 80, 65, 100};
+	std::vector<std::string> StudentNames = { "Otto Bild" , "Samwise Gamgee", "Dino Saur"};
+	EXPECT_EQ(
+		student_ranking(StudentScores, StudentNames),
+		std::vector<std::string>({
+			"1 Dino Saur 100",
+			"2 Otto Bild 80",
+			"3 Samwise Gamgee 65"
 			})
 	);
 }
