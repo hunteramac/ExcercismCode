@@ -57,17 +57,27 @@ std::array<int, 4> letter_grades(const int highestScore) {
 /// <summary>
 /// 
 /// </summary>
-/// <param name="studentScores"> Expected to be in order highest to lowest. </param>
+/// <param name="studentScores"> Expected to be in order highest to lowest. -> check this again, might be false </param>
 /// <param name="studentNames"> Expected to be in order matching the score. </param> 
 /// <returns></returns>
 std::vector<std::string> student_ranking(std::vector<int> studentScores, std::vector<std::string> studentNames) {
 	std::vector<std::string> StudentRankings;
 
-	//do we trust user provide scors and names of same length? this code does...
+	//can c++ sorts do 2x vectors?
+	// std algorithms?
+
+	//get highest score
+	//push back
+
+	//repeat till coverage
+
+	//do we trust user provide scores and names of same length? this code does...
+
 	for (int i = 0; i < studentScores.size(); i++) {
-		StudentRankings.push_back(
-			std::to_string(i+1) + " " + studentNames[i] + " " + std::to_string(studentScores[i])
-		);
+
+		///*StudentRankings.push_back(
+		//	std::to_string(i+1) + " " + studentNames[i] + " " + std::to_string(studentScores[i])
+		//);*/
 	}
 
 	return StudentRankings;
