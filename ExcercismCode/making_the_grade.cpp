@@ -51,21 +51,46 @@ std::array<int, 4> letter_grades(const int highestScore) {
 	return letterGradeThresholds;
 }
 
+//#include <ranges>
+#include <algorithm>
+//unless you have ranges, simplest is just
+
 /// <summary>
-/// 
+/// Produces set of student rankings in descending order.
 /// </summary>
-/// <param name="studentScores"> Expected to be in order highest to lowest. </param>
+/// <param name="studentScores"> No order required </param>
 /// <param name="studentNames"> Expected to be in order matching the score. </param> 
-/// <returns></returns>
+/// <returns>vector holding string representation of student ranking, in descending order</returns>
 std::vector<std::string> student_ranking(std::vector<int> studentScores, std::vector<std::string> studentNames) {
-	std::vector<std::string> StudentRankings;
-	for (int i = 0; i < studentScores.size(); i++) {
-		StudentRankings.push_back(
-			std::to_string(i+1) + ". " + studentNames[i] + ": " + std::to_string(studentScores[i])
+	//probably should do something if user provides uneven vectors? best given what we can
+	//this will prevent an out of bounds occuring
+	int minSize = (studentScores.size() < studentNames.size()) ? studentScores.size() : studentNames.size();
+
+	//zip the scores
+
+	// We only use this in this function at the moment
+	struct studentRank {
+		int studentScore;
+		std::string studentName;
+	};
+	
+	std::vector<studentRank> StudentRankings;
+	for (int i = 0; i < minSize; ++i) {
+		StudentRankings.push_back(studentRank(studentScores[i], studentNames[i]));
+	}
+	
+	//sort them descending order
+	std::sort(StudentRankings.begin(), StudentRankings.end(), [](studentRank a, studentRank b) { return a.studentScore > b.studentScore; });
+
+	//make display vector
+	std::vector<std::string> DisplayStudentRankings;
+	for (int i = 0; i < minSize; ++i) {
+		DisplayStudentRankings.push_back(
+			std::to_string(i+1) + ". " + StudentRankings[i].studentName + ": " + std::to_string(StudentRankings[i].studentScore)
 		);
 	}
-
-	return StudentRankings;
+	
+	return DisplayStudentRankings;
 }
 
 std::string perfect_score(std::vector<int> studentScores, std::vector<std::string> studentNames){
