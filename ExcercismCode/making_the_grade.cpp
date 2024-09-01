@@ -51,6 +51,12 @@ std::array<int, 4> letter_grades(const int highestScore) {
 	return letterGradeThresholds;
 }
 
+// We only use this in student ranking function at the moment
+struct StudentScore {
+	int studentScore;
+	std::string studentName;
+};
+
 //#include <ranges>
 #include <algorithm>
 //unless you have ranges, simplest is just
@@ -62,31 +68,29 @@ std::array<int, 4> letter_grades(const int highestScore) {
 /// <param name="studentNames"> Expected to be in order matching the score. </param> 
 /// <returns>vector holding string representation of student ranking, in descending order</returns>
 std::vector<std::string> student_ranking(std::vector<int> studentScores, std::vector<std::string> studentNames) {
-	//probably should do something if user provides uneven vectors? best given what we can
+	//probably should do something if user provides uneven vectors? do best given what we can
 	//this will prevent an out of bounds occuring
 	int minSize = (studentScores.size() < studentNames.size()) ? studentScores.size() : studentNames.size();
 
 	//zip the scores
-
-	// We only use this in this function at the moment
-	struct studentRank {
-		int studentScore;
-		std::string studentName;
-	};
 	
-	std::vector<studentRank> StudentRankings;
+	std::vector<StudentScore> StudentScores;
 	for (int i = 0; i < minSize; ++i) {
-		StudentRankings.push_back(studentRank(studentScores[i], studentNames[i]));
+		StudentScore tempScore;
+		tempScore.studentName = studentNames[i];
+		tempScore.studentScore = studentScores[i];
+
+		StudentScores.push_back(tempScore);
 	}
 	
 	//sort them descending order
-	std::sort(StudentRankings.begin(), StudentRankings.end(), [](studentRank a, studentRank b) { return a.studentScore > b.studentScore; });
+	std::sort(StudentScores.begin(), StudentScores.end(), [](StudentScore a, StudentScore b) { return a.studentScore > b.studentScore; });
 
 	//make display vector
 	std::vector<std::string> DisplayStudentRankings;
 	for (int i = 0; i < minSize; ++i) {
 		DisplayStudentRankings.push_back(
-			std::to_string(i+1) + ". " + StudentRankings[i].studentName + ": " + std::to_string(StudentRankings[i].studentScore)
+			std::to_string(i+1) + ". " + StudentScores[i].studentName + ": " + std::to_string(StudentScores[i].studentScore)
 		);
 	}
 	
