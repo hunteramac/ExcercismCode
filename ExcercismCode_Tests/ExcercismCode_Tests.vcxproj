@@ -46,6 +46,7 @@
     <ClCompile Include="TestLastWill.cpp" />
     <ClCompile Include="testThrow.cpp" />
     <ClCompile Include="Test_FreeLancer.cpp" />
+    <ClCompile Include="Test_InterestIsInteresting.cpp" />
     <ClCompile Include="Test_Lasagna.cpp" />
     <ClCompile Include="Test_LogLevels.cpp" />
     <ClCompile Include="Test_MakingTheGrade.cpp" />

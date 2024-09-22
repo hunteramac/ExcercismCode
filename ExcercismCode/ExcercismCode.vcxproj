@@ -130,6 +130,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="freelancer_rates.cpp" />
+    <ClCompile Include="interest_is_interesting.cpp" />
     <ClCompile Include="lasagna.cpp" />
     <ClCompile Include="last_will.cpp" />
     <ClCompile Include="log_levels.cpp" />

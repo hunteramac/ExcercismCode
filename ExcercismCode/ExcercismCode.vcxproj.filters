@@ -34,6 +34,9 @@
     <Filter Include="vehiclePurchase">
       <UniqueIdentifier>{44800b99-ce8a-43e4-af0c-20b04573dfe8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\interest_is_interesting">
+      <UniqueIdentifier>{a65fae38-05c7-487b-a390-4fd4ab735c1e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="numberFunctions.cpp">
@@ -65,6 +68,9 @@
     </ClCompile>
     <ClCompile Include="testClass.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="interest_is_interesting.cpp">
+      <Filter>Source Files\interest_is_interesting</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
