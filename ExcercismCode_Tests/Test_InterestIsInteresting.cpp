@@ -10,6 +10,24 @@ namespace InterestInteresting {
 	}
 
 	TEST(InterestRate, posBracket1) {
-		EXPECT_EQ(interest_rate(10), 0.5);
+		EXPECT_EQ(interest_rate(0), 0.5);
+		EXPECT_EQ(interest_rate(999), 0.5);
+	}
+
+	TEST(InterestRate, posB2) {
+		EXPECT_EQ(interest_rate(1000), 1.621);
+		EXPECT_EQ(interest_rate(4999), 1.621);
+	}
+
+	TEST(InterestRate, posB3) {
+		EXPECT_EQ(interest_rate(5000), 2.475);
+	}
+
+	TEST(YearlyInterest, yearly1) {
+		EXPECT_EQ(yearly_interest(200), 1);
+	}
+
+	TEST(AnnualBalanceUpdate, update1){
+		EXPECT_EQ(annual_balance_update(200), 201);
 	}
 }
