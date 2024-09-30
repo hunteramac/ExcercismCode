@@ -30,4 +30,22 @@ namespace InterestInteresting {
 	TEST(AnnualBalanceUpdate, update1){
 		EXPECT_EQ(annual_balance_update(200), 201);
 	}
+
+	TEST(YearsTillBalance, BalanceLarger) {
+		EXPECT_EQ(years_until_desired_balance(300, 200), 0);
+	}
+
+	TEST(YearsTillBalance, OneYear){
+		EXPECT_EQ(years_until_desired_balance(300, 200), 0);
+	}
+
+	// if user provides a negative cur balance, but a positive target, white box says current implementation will infinite loop
+	TEST(YearsTillBalance, negativeBalacnePosTarget) {
+		//Should detect problem and return 0
+		EXPECT_EQ(years_until_desired_balance(-100, 200), 0);
+	}
+
+	TEST(YearsTillBalance, till1) {
+		EXPECT_EQ(years_until_desired_balance(200.75, 214.88), 14);
+	}
 }

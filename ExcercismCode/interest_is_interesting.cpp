@@ -33,5 +33,23 @@ double annual_balance_update(double balance) {
 // to reach the desired balance.
 int years_until_desired_balance(double balance, double target_balance) {
     // TODO: Implement the years_until_desired_balance function
-    return 0;
+
+    int curYear = 0;
+    double curBalance = balance;
+
+    if (balance<0 && target_balance>balance) {
+        return curYear;
+    }
+
+
+    if (balance == target_balance) {
+        return curYear;
+    }
+
+    while (curBalance < target_balance) {
+        curBalance = annual_balance_update(curBalance);
+        ++curYear;
+    }
+
+    return curYear;
 }
