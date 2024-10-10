@@ -37,6 +37,9 @@
     <Filter Include="Source Files\interest_is_interesting">
       <UniqueIdentifier>{a65fae38-05c7-487b-a390-4fd4ab735c1e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\AlienGame">
+      <UniqueIdentifier>{f8a2c101-0189-48fb-af3a-b75edbcb32c9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="numberFunctions.cpp">
@@ -71,6 +74,9 @@
     </ClCompile>
     <ClCompile Include="interest_is_interesting.cpp">
       <Filter>Source Files\interest_is_interesting</Filter>
+    </ClCompile>
+    <ClCompile Include="ellens_alien_game.cpp">
+      <Filter>Source Files\AlienGame</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -129,6 +129,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ellens_alien_game.cpp" />
     <ClCompile Include="freelancer_rates.cpp" />
     <ClCompile Include="interest_is_interesting.cpp" />
     <ClCompile Include="lasagna.cpp" />
