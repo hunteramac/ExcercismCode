@@ -78,12 +78,24 @@
     <ClCompile Include="ellens_alien_game.cpp">
       <Filter>Source Files\AlienGame</Filter>
     </ClCompile>
+    <ClCompile Include="pretendMFCClass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="testDerivativeClass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="vehicle_purchase.h">
       <Filter>vehiclePurchase</Filter>
     </ClInclude>
     <ClInclude Include="testClass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pretendMFCClass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="testDerivativeClass.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -36,6 +36,12 @@
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\ExcercismCode\pretendMFCClass.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\ExcercismCode\testDerivativeClass.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="test.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -45,6 +51,7 @@
     </ClCompile>
     <ClCompile Include="TestEllensAlienGame.cpp" />
     <ClCompile Include="TestLastWill.cpp" />
+    <ClCompile Include="testSubclassDoubleMethod.cpp" />
     <ClCompile Include="testThrow.cpp" />
     <ClCompile Include="Test_FreeLancer.cpp" />
     <ClCompile Include="Test_InterestIsInteresting.cpp" />
