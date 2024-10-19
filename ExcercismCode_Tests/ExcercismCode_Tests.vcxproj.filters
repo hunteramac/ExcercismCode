@@ -20,6 +20,7 @@
     <ClCompile Include="..\ExcercismCode\testDerivativeClass.cpp">
       <Filter>source</Filter>
     </ClCompile>
+    <ClCompile Include="testPlacementNew.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />

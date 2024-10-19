@@ -51,6 +51,7 @@
     </ClCompile>
     <ClCompile Include="TestEllensAlienGame.cpp" />
     <ClCompile Include="TestLastWill.cpp" />
+    <ClCompile Include="testPlacementNew.cpp" />
     <ClCompile Include="testSubclassDoubleMethod.cpp" />
     <ClCompile Include="testThrow.cpp" />
     <ClCompile Include="Test_FreeLancer.cpp" />
