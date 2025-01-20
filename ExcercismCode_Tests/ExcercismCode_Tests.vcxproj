@@ -54,6 +54,7 @@
     <ClCompile Include="testPlacementNew.cpp" />
     <ClCompile Include="testSubclassDoubleMethod.cpp" />
     <ClCompile Include="testThrow.cpp" />
+    <ClCompile Include="Test_ElectionDay.cpp" />
     <ClCompile Include="Test_FreeLancer.cpp" />
     <ClCompile Include="Test_InterestIsInteresting.cpp" />
     <ClCompile Include="Test_Lasagna.cpp" />

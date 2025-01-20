@@ -21,6 +21,7 @@
       <Filter>source</Filter>
     </ClCompile>
     <ClCompile Include="testPlacementNew.cpp" />
+    <ClCompile Include="Test_ElectionDay.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
