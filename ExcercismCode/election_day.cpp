@@ -15,7 +15,9 @@ namespace election {
     // TODO: Task 1
     // vote_count takes a reference to an `ElectionResult` as an argument and will
     // return the number of votes in the `ElectionResult.
-
+    int vote_count(ElectionResult& election) {
+        return election.votes;
+    }
 
     // TODO: Task 2
     // increment_vote_count takes a reference to an `ElectionResult` as an argument
