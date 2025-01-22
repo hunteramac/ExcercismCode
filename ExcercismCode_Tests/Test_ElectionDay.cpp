@@ -25,4 +25,26 @@ namespace ElectionDay {
 
 		EXPECT_EQ(1808, vote_count(hamilton));
 	}
+
+	TEST(DetermineResult, PresidentPedro) {
+		ElectionResult sanchez{ "Pedro", 471 };
+		ElectionResult wheatley{ "Summer", 340 };
+		std::vector<ElectionResult> final_count{ sanchez, wheatley };
+
+		ElectionResult& winner = determine_result(final_count);
+
+		EXPECT_EQ(winner.name,"President Pedro");
+	}
+
+	// write a test capturing a different order, requiring tested function
+	// to actually compare the votes to determine the winner
+	TEST(DetermineResult, PresidentSummer) {
+		ElectionResult sanchez{ "Pedro", 340 };
+		ElectionResult wheatley{ "Summer", 471 };
+		std::vector<ElectionResult> final_count{ sanchez, wheatley };
+
+		ElectionResult& winner = determine_result(final_count);
+
+		EXPECT_EQ(winner.name, "President Summer");
+	}
 };

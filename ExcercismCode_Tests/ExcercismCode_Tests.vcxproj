@@ -61,6 +61,7 @@
     <ClCompile Include="Test_LogLevels.cpp" />
     <ClCompile Include="Test_MakingTheGrade.cpp" />
     <ClCompile Include="Test_PacmanRules.cpp" />
+    <ClCompile Include="Test_TrollTheTrolls.cpp" />
     <ClCompile Include="Test_VehiclePurchase.cpp" />
   </ItemGroup>
   <ItemGroup>

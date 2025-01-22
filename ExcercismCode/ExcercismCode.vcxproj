@@ -143,6 +143,7 @@
     <ClCompile Include="pretendMFCClass.cpp" />
     <ClCompile Include="testClass.cpp" />
     <ClCompile Include="testDerivativeClass.cpp" />
+    <ClCompile Include="troll_the_trolls.cpp" />
     <ClCompile Include="vehicle_purchase.cpp" />
   </ItemGroup>
   <ItemGroup>

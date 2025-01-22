@@ -22,6 +22,7 @@
     </ClCompile>
     <ClCompile Include="testPlacementNew.cpp" />
     <ClCompile Include="Test_ElectionDay.cpp" />
+    <ClCompile Include="Test_TrollTheTrolls.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
