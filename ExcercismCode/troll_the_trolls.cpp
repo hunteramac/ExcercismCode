@@ -6,7 +6,8 @@ namespace hellmath {
 		troll,
 		guest,
 		user,
-		mod
+		mod,
+		END
 	};
 
 	// TODO: Task 1 - Define an `Action` enumeration to represent the three
@@ -14,7 +15,8 @@ namespace hellmath {
 	enum class Action {
 		read,
 		write,
-		remove
+		remove,
+		END,
 	};
 	// TODO: Task 2 - Implement the `display_post` function, that gets two arguments
 	// of `AccountStatus` and returns a `bool`. The first argument is the status of

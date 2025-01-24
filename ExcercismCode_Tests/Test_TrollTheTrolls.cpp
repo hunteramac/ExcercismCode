@@ -4,13 +4,6 @@
 using namespace hellmath;
 
 namespace TrollTheTrolls {
-
-	std::vector<AccountStatus> allUserTypes = {
-		AccountStatus::troll,
-		AccountStatus::guest,
-		AccountStatus::user,
-		AccountStatus::mod
-	};
 	TEST(Dummy, AlwaysTrue) {
 		EXPECT_TRUE(true);
 	}
@@ -20,32 +13,29 @@ namespace TrollTheTrolls {
 	}
 
 	TEST(DisplayPost, DisplayNonTrollPostsToAll) {
-		// How can we paramterize this test?
-		std::vector<AccountStatus> noTrolls = {
-			AccountStatus::guest,
-			AccountStatus::user,
-			AccountStatus::mod
-		};
 
-		for( auto curTypeNoTrolls : noTrolls)
-			for (auto curType: allUserTypes)
-				EXPECT_TRUE(display_post(curTypeNoTrolls, curType));
+		// For all non troll accounts
+		for (int i = 0; i < static_cast<int>(AccountStatus::END); ++i) {
+			if (static_cast<AccountStatus>(i) != AccountStatus::troll) {
+				AccountStatus curUserTypeNoTrolls = static_cast<AccountStatus>(i);
+
+				// Check can display posts of these accounts to all users
+				for (int j = 0; j < static_cast<int>(AccountStatus::END); ++j) {
+					AccountStatus curUserType = static_cast<AccountStatus>(j);
+					EXPECT_TRUE(display_post(curUserTypeNoTrolls, curUserType));
+				}
+			}		
+		}
 	}
 
 	TEST(DisplayPost, OnlyTrollsSeeTrollPosts) {
-		// in C++ there appears to not currently be a good way to itterate over an Enum'S possible values
-		// therefore, we must make do in these tests with arrays that will become out of date if new
-		// entries to the enum are added.
-		std::vector<AccountStatus> Types = {
-			AccountStatus::guest,
-			AccountStatus::user,
-			AccountStatus::mod
-		};
-
-		EXPECT_TRUE(display_post(AccountStatus::troll, AccountStatus::troll));
-
-		for (auto curType : Types) {
-			EXPECT_FALSE(display_post(AccountStatus::troll, curType));
+		//Itterate over the enum
+		for (int i = 0; i < static_cast<int>(AccountStatus::END); ++i) {
+			AccountStatus curUserType = static_cast<AccountStatus>(i);
+			if (curUserType == AccountStatus::troll)
+				EXPECT_TRUE(display_post(AccountStatus::troll, curUserType));
+			else
+				EXPECT_FALSE(display_post(AccountStatus::troll, curUserType));
 		}
 	}
 
@@ -54,20 +44,23 @@ namespace TrollTheTrolls {
 	}
 
 	TEST(PermissionCheck, AllUsersCanReadPosts) {
-		for(auto user : allUserTypes)
-			EXPECT_TRUE(permission_check(Action::read, user));
+		for (int i = 0; i < static_cast<int>(AccountStatus::END); ++i)
+			EXPECT_TRUE(permission_check(Action::read, static_cast<AccountStatus>(i)));
 	}
 
 	TEST(PermissionCheck, AllUsersButGuestsCanWrite) {
-		for (auto user : allUserTypes)
+		for (int i = 0; i < static_cast<int>(AccountStatus::END); ++i){
+			AccountStatus user = static_cast<AccountStatus>(i);
 			if (user == AccountStatus::guest)
 				EXPECT_FALSE(permission_check(Action::write, user));
 			else
 				EXPECT_TRUE(permission_check(Action::write, user));
+		}
 	}
 
 	TEST(PermissionCheck, OnlyModeratorsCanRemovePosts) {
-		for (auto user : allUserTypes) {
+		for (int i = 0; i < static_cast<int>(AccountStatus::END); ++i){
+			AccountStatus user = static_cast<AccountStatus>(i);
 			if (user == AccountStatus::mod)
 				EXPECT_TRUE(permission_check(Action::remove, user));
 			else
