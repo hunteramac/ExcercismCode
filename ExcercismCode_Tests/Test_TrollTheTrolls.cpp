@@ -67,7 +67,46 @@ namespace TrollTheTrolls {
 				EXPECT_FALSE(permission_check(Action::remove, user));
 		}
 	}
-	TEST(ValidPlayerCombination, call) {
-		valid_player_combination(AccountStatus::troll, AccountStatus::guest);
+	TEST(ValidPlayerCombination, GuestPairingInvalid) {
+		for (int i = 0; i < static_cast<int>(AccountStatus::END); ++i) {
+			AccountStatus curUser = static_cast<AccountStatus>(i);
+			EXPECT_FALSE(
+				valid_player_combination(
+					curUser,
+					AccountStatus::guest
+			));
+			EXPECT_FALSE(
+				valid_player_combination(
+					AccountStatus::guest,
+					curUser
+			));
+		}
+	}
+
+	TEST(ValidPlayerCombination, TrollPairingValidOnlyWithOtherTrolls){
+		EXPECT_TRUE(
+			valid_player_combination(
+				AccountStatus::troll, 
+				AccountStatus::troll
+		));
+
+		for (int i = 0; i < static_cast<int>(AccountStatus::END); ++i) {
+			AccountStatus curUser = static_cast<AccountStatus>(i);
+			if (curUser == AccountStatus::troll)
+				break;
+
+			EXPECT_FALSE(
+				valid_player_combination(
+					AccountStatus::troll,
+					curUser
+				)
+			);
+			EXPECT_FALSE(
+				valid_player_combination(
+					curUser, 
+					AccountStatus::troll
+				)
+			);
+		}
 	}
 };

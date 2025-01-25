@@ -44,6 +44,15 @@ namespace hellmath {
 	// checks if two players can join the same game. The function has two parameters
 	// of type `AccountStatus` and returns a `bool`.
 	bool valid_player_combination(AccountStatus player1, AccountStatus player2) {
+		if (player1 == AccountStatus::guest || player2 == AccountStatus::guest) {
+			return false;
+		}
+		else if (player1 == AccountStatus::troll && player2 == AccountStatus::troll) {
+			return true;
+		}
+		else if (player1 == AccountStatus::troll || player2 == AccountStatus::troll) {
+			return false;
+		}
 		return true;
 	}
 
