@@ -23,6 +23,10 @@
     <ClCompile Include="testPlacementNew.cpp" />
     <ClCompile Include="Test_ElectionDay.cpp" />
     <ClCompile Include="Test_TrollTheTrolls.cpp" />
+    <ClCompile Include="Test_DoctorData.cpp" />
+    <ClCompile Include="..\ExcercismCode\doctor_data.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />

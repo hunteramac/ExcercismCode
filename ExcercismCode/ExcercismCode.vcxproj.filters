@@ -90,6 +90,9 @@
     <ClCompile Include="troll_the_trolls.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="doctor_data.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="vehicle_purchase.h">
@@ -102,6 +105,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="testDerivativeClass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="doctor_data.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

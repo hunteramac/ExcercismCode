@@ -129,6 +129,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="doctor_data.cpp" />
     <ClCompile Include="election_day.cpp" />
     <ClCompile Include="ellens_alien_game.cpp" />
     <ClCompile Include="freelancer_rates.cpp" />
@@ -147,6 +148,7 @@
     <ClCompile Include="vehicle_purchase.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="doctor_data.h" />
     <ClInclude Include="pretendMFCClass.h" />
     <ClInclude Include="testClass.h" />
     <ClInclude Include="testDerivativeClass.h" />
