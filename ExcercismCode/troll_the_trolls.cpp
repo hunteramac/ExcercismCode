@@ -59,6 +59,28 @@ namespace hellmath {
 	// TODO: Task 5 - Implement the `has_priority` function that takes two
 	// `AccountStatus` arguments and returns `true`, if and only if the first
 	// account has a strictly higher priority than the second.
+	bool has_priority(AccountStatus player1, AccountStatus player2) {
 
+		if (player1 == player2)
+			return false;
+
+		if (player1 == AccountStatus::user && player2 != AccountStatus::mod)
+		{
+			return true;
+		}
+		
+		if (player1 == AccountStatus::mod && player2 != AccountStatus::mod)
+		{
+			return true;
+		}
+		else if (player1 != AccountStatus::troll && player2 == AccountStatus::troll)
+		{
+			return true;
+		}
+		else 
+		{
+			return false;
+		}
+	}
 
 }  // namespace hellmath

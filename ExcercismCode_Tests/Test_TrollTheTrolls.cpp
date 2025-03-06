@@ -109,4 +109,67 @@ namespace TrollTheTrolls {
 			);
 		}
 	}
+
+	TEST(HasPriority, UserHasPriorityOverTroll)
+	{
+		EXPECT_TRUE
+		(
+			has_priority(AccountStatus::user, AccountStatus::troll)
+		);
+	}
+
+	TEST(HasPriority, GuestDoesntHavePriorityOverMod)
+	{
+		EXPECT_FALSE
+		(
+			has_priority(AccountStatus::guest, AccountStatus::mod)
+		);
+	}
+
+	TEST(HasPriority, EqualUserTypesStrictlyHigher)
+	{
+		EXPECT_FALSE
+		(
+			has_priority(AccountStatus::mod, AccountStatus::mod)
+		);
+
+		EXPECT_FALSE
+		(
+			has_priority(AccountStatus::user, AccountStatus::user)
+		);
+
+		EXPECT_FALSE
+		(
+			has_priority(AccountStatus::guest, AccountStatus::guest)
+		);
+
+		EXPECT_FALSE
+		(
+			has_priority(AccountStatus::troll, AccountStatus::troll)
+		);
+	}
+
+	TEST(HasPriority, ModHasPriorityOverUser)
+	{
+		EXPECT_TRUE
+		(
+			has_priority(AccountStatus::mod, AccountStatus::user)
+		);
+	}
+
+	TEST(HasPriority, UserHasPriorityOverGuest)
+	{
+		EXPECT_TRUE
+		(
+			has_priority(AccountStatus::user, AccountStatus::guest)
+		);
+	}
+
+	TEST(HasPriority, GuestDoesntHavePriorityUser)
+	{
+		EXPECT_FALSE
+		(
+			has_priority(AccountStatus::guest, AccountStatus::user)
+		);
+	}
 };
