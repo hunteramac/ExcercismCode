@@ -27,6 +27,10 @@
     <ClCompile Include="..\ExcercismCode\doctor_data.cpp">
       <Filter>source</Filter>
     </ClCompile>
+    <ClCompile Include="Test_LasagnaMaster.cpp" />
+    <ClCompile Include="..\ExcercismCode\lasagna_master.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />

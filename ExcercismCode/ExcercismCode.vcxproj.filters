@@ -40,6 +40,9 @@
     <Filter Include="Source Files\AlienGame">
       <UniqueIdentifier>{f8a2c101-0189-48fb-af3a-b75edbcb32c9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\lasagna_master">
+      <UniqueIdentifier>{318525a9-4915-4bbb-9b1c-99ebd0758260}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="numberFunctions.cpp">
@@ -108,6 +111,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="doctor_data.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="lasagna_master.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -40,6 +40,9 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="..\ExcercismCode\lasagna_master.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="..\ExcercismCode\pretendMFCClass.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
@@ -63,6 +66,7 @@
     <ClCompile Include="Test_FreeLancer.cpp" />
     <ClCompile Include="Test_InterestIsInteresting.cpp" />
     <ClCompile Include="Test_Lasagna.cpp" />
+    <ClCompile Include="Test_LasagnaMaster.cpp" />
     <ClCompile Include="Test_LogLevels.cpp" />
     <ClCompile Include="Test_MakingTheGrade.cpp" />
     <ClCompile Include="Test_PacmanRules.cpp" />

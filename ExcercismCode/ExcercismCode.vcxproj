@@ -149,6 +149,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="doctor_data.h" />
+    <ClInclude Include="lasagna_master.h" />
     <ClInclude Include="pretendMFCClass.h" />
     <ClInclude Include="testClass.h" />
     <ClInclude Include="testDerivativeClass.h" />
