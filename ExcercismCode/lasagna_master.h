@@ -12,4 +12,6 @@ namespace lasagna_master {
 
     int preparationTime(std::vector<std::string>layers, int averagePreparationTime = 2);
 
+
+    amount quantities(std::vector<std::string>layers);
 }  // namespace lasagna_master
