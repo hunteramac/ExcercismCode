@@ -1,5 +1,6 @@
 #include "lasagna_master.h"
 #include "lasagna_master.h"
+#include "lasagna_master.h"
 
 namespace lasagna_master {
 
@@ -24,6 +25,10 @@ namespace lasagna_master {
 		}
 
 		return result;
+	}
+
+	void addSecretIngredient(std::vector<std::string>& toModify, const std::vector<std::string> completeList)
+	{
 	}
 
 }  // namespace lasagna_master

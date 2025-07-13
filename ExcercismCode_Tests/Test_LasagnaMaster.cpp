@@ -40,4 +40,13 @@ TEST(Quantities, DeterminesAmountNeededWithMultipleLayers)
 	EXPECT_EQ(needed.sauce, 0.4);
 }
 
+TEST(AddScecretIngredient, IsCallable)
+{
+	std::vector<std::string> ingredientsList = { "noodles","sauce","?"};
+	std::vector<std::string> secretList = { "noodles","sauce","kampot pepper" };
+
+
+	lasagna_master::addSecretIngredient(ingredientsList, secretList);
+}
+
 }
