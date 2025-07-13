@@ -3,7 +3,8 @@
 
 namespace lasagna_master {
 
-	// TODO: add your solution here
+	const int NoodleLayerGrams = 50;
+	const double SauceLayerLiters = 0.2;
 
 	int preparationTime(std::vector<std::string> layers, int averagePreparationTime)
 	{
@@ -17,9 +18,9 @@ namespace lasagna_master {
 		for (std::string layer : layers)
 		{
 			if (layer == "sauce")
-				result.sauce += 0.2;
+				result.sauce += SauceLayerLiters;
 			else if (layer == "noodles")
-				result.noodles += 50;
+				result.noodles += NoodleLayerGrams;
 		}
 
 		return result;

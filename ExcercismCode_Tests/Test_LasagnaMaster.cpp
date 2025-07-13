@@ -29,4 +29,15 @@ TEST(Quantities, DeterminesAmountNeededInSimpleCase)
 	EXPECT_EQ(result.sauce, 0.2);
 }
 
+TEST(Quantities, DeterminesAmountNeededWithMultipleLayers)
+{
+	lasagna_master::amount needed{ 
+		lasagna_master::quantities(
+			{"sauce", "noodles", "sauce", "meat", "mozzarella", "noodles"}
+		)
+	};
+	EXPECT_EQ(needed.noodles, 100);
+	EXPECT_EQ(needed.sauce, 0.4);
+}
+
 }
