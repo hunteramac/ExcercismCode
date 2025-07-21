@@ -49,4 +49,27 @@ TEST(AddScecretIngredient, IsCallable)
 	lasagna_master::addSecretIngredient(ingredientsList, secretList);
 }
 
+TEST(AddScecretIngredient, AddsSecretIngredient1)
+{
+	std::vector<std::string> ingredientsList = { "noodles","sauce","?" };
+	std::vector<std::string> secretList = { "noodles","sauce","kampot pepper" };
+
+
+	lasagna_master::addSecretIngredient(ingredientsList, secretList);
+
+	EXPECT_EQ(ingredientsList, secretList);
+}
+
+TEST(AddScecretIngredient, AddsSecretIngredientWhenListsAreDifferent)
+{
+	std::vector<std::string> ingredientsList = { "noodles","meat","sauce","mozzerella","?"};
+	std::vector<std::string> secretList = { "noodles","sauce","kampot pepper" };
+
+
+	lasagna_master::addSecretIngredient(ingredientsList, secretList);
+
+	std::vector<std::string> expectList = { "noodles","meat","sauce","mozzerella","kampot pepper" };
+	EXPECT_EQ(ingredientsList, expectList);
+}
+
 }

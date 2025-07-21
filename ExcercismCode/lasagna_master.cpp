@@ -27,8 +27,12 @@ namespace lasagna_master {
 		return result;
 	}
 
-	void addSecretIngredient(std::vector<std::string>& toModify, const std::vector<std::string> completeList)
+	void addSecretIngredient(std::vector<std::string>& toModify, const std::vector<std::string>& completeList)
 	{
+		// The end of the input list should be replaced with the secret ingredient.
+		// The end of the complete list has the secret ingredient.
+		//toModify[toModify.size()] = completeList.end();
+		toModify[toModify.size()-1] = completeList[completeList.size() - 1];
 	}
 
 }  // namespace lasagna_master
