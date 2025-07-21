@@ -72,4 +72,12 @@ TEST(AddScecretIngredient, AddsSecretIngredientWhenListsAreDifferent)
 	EXPECT_EQ(ingredientsList, expectList);
 }
 
+TEST(AddScecretIngredient, DoesntCrashIfUserProvidedEmptyToReplaceList)
+{
+	std::vector<std::string> ingredientsList = {};
+	std::vector<std::string> secretList = { "noodles","sauce","kampot pepper" };
+
+	lasagna_master::addSecretIngredient(ingredientsList, secretList);
+}
+
 }

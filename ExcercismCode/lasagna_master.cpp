@@ -32,7 +32,8 @@ namespace lasagna_master {
 		// The end of the input list should be replaced with the secret ingredient.
 		// The end of the complete list has the secret ingredient.
 		//toModify[toModify.size()] = completeList.end();
-		toModify[toModify.size()-1] = completeList[completeList.size() - 1];
+		if(!toModify.empty())
+			toModify.back() = completeList.back();
 	}
 
 }  // namespace lasagna_master
