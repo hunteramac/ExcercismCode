@@ -80,4 +80,17 @@ TEST(AddScecretIngredient, DoesntCrashIfUserProvidedEmptyToReplaceList)
 	lasagna_master::addSecretIngredient(ingredientsList, secretList);
 }
 
+TEST(ScaleRecipe, CanBeCalled)
+{
+	std::vector<double> quantities{ 1.2,3.6,10.5 };
+	lasagna_master::scaleRecipe(quantities, 4);
+}
+
+TEST(ScaleRecipe, ScalesQuantities1)
+{
+	std::vector<double> quantities{ 1.2,3.6,10.5 };
+	std::vector<double> expectedAmounts{ 2.4, 7.2, 21 };
+	EXPECT_EQ(expectedAmounts, lasagna_master::scaleRecipe(quantities, 4));
+}
+
 }

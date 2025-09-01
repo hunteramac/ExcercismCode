@@ -1,6 +1,7 @@
 #include "lasagna_master.h"
 #include "lasagna_master.h"
 #include "lasagna_master.h"
+#include <algorithm>
 
 namespace lasagna_master {
 
@@ -34,6 +35,14 @@ namespace lasagna_master {
 		//toModify[toModify.size()] = completeList.end();
 		if(!toModify.empty())
 			toModify.back() = completeList.back();
+	}
+
+	std::vector<double> scaleRecipe(std::vector<double> quantities, int portions)
+	{
+		std::transform(quantities.begin(), quantities.end(), quantities.begin(), [portions](double v) { return v * portions / 2; });
+		//auto result = quantities | std::views::transform([](double v) { return v * 1 / 2; });
+			
+		return quantities;
 	}
 
 }  // namespace lasagna_master
