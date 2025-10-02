@@ -37,6 +37,12 @@ namespace lasagna_master {
 			toModify.back() = completeList.back();
 	}
 
+	void addSecretIngredient(std::vector<std::string>& toModify, std::string secretIngredient)
+	{
+		if (!toModify.empty())
+			toModify.back() = secretIngredient;
+	}
+
 	std::vector<double> scaleRecipe(std::vector<double> quantities, int portions)
 	{
 		std::transform(quantities.begin(), quantities.end(), quantities.begin(), [portions](double v) { return v * portions / 2; });

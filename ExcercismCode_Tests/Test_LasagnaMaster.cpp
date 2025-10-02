@@ -93,4 +93,14 @@ TEST(ScaleRecipe, ScalesQuantities1)
 	EXPECT_EQ(expectedAmounts, lasagna_master::scaleRecipe(quantities, 4));
 }
 
+TEST(AddSecretIngredientSecret, AddsToEnd)
+{
+	std::vector<std::string> myList{ "noodles", "meat", "sauce", "mozzarella", "?" };
+	std::string secretIngredient{ "spice melange" };
+	lasagna_master::addSecretIngredient(myList, secretIngredient);
+
+	std::vector<std::string> expectList{ "noodles", "meat", "sauce", "mozzarella", "spice melange" };
+	EXPECT_EQ(myList, expectList);
+}
+
 }
