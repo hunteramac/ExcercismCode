@@ -96,6 +96,9 @@
     <ClCompile Include="doctor_data.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="power_of_troy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="vehicle_purchase.h">
@@ -114,6 +117,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="lasagna_master.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="power_of_troy.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

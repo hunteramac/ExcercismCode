@@ -31,6 +31,7 @@
     <ClCompile Include="..\ExcercismCode\lasagna_master.cpp">
       <Filter>source</Filter>
     </ClCompile>
+    <ClCompile Include="Test_PowerOfTroy.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
