@@ -15,5 +15,7 @@ namespace troy
 
 	struct human {
 		std::unique_ptr<artifact> possession;
+		std::unique_ptr<power> own_power;
+		std::unique_ptr<power> influenced_by;
 	};
 } //namespace troy
