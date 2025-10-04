@@ -18,4 +18,6 @@ namespace troy
 		std::unique_ptr<power> own_power;
 		std::unique_ptr<power> influenced_by;
 	};
+
+	void give_new_artifact(human& possessor, std::string artifact);
 } //namespace troy

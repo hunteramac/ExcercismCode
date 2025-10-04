@@ -42,4 +42,12 @@ TEST(Humans, CanBeInfluencedByPowers)
 	EXPECT_EQ(wyll_ravengaurd.influenced_by.get()->effect, "Hell fire");
 }
 
+TEST(GiveNewArtifact, CanGiveArtifact)
+{
+	troy::human hadrian_marlowe{};
+	troy::give_new_artifact(hadrian_marlowe, "Adamantine arm");
+
+	EXPECT_EQ(hadrian_marlowe.possession->name, "Adamantine arm");
+}
+
 } //namespace PowerOfTroy

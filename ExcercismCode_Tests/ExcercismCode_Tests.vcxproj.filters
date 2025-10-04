@@ -32,6 +32,9 @@
       <Filter>source</Filter>
     </ClCompile>
     <ClCompile Include="Test_PowerOfTroy.cpp" />
+    <ClCompile Include="..\ExcercismCode\power_of_troy.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
