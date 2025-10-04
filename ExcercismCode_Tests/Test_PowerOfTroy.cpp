@@ -50,4 +50,17 @@ TEST(GiveNewArtifact, CanGiveArtifact)
 	EXPECT_EQ(hadrian_marlowe.possession->name, "Adamantine arm");
 }
 
+TEST(ExchangeArtifacts, CanExchange)
+{
+	troy::human valeros{};
+	troy::give_new_artifact(valeros, "Headband of intellect");
+	troy::human ezren{};
+	troy::give_new_artifact(ezren, "Flame tongue longsword");
+
+	troy::exchange_artifacts(valeros.possession, ezren.possession);
+
+	EXPECT_EQ(valeros.possession->name, "Flame tongue longsword");
+	EXPECT_EQ(ezren.possession->name, "Headband of intellect");
+}
+
 } //namespace PowerOfTroy
