@@ -12,4 +12,8 @@ namespace troy {
 		a.swap(b);
 	}
 
+	void manifest_power(human& manifestor, std::string power)
+	{
+		manifestor.own_power = std::make_unique<troy::power>(troy::power{ .effect = power });
+	}
 }  // namespace troy

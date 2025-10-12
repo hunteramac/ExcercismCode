@@ -63,4 +63,11 @@ TEST(ExchangeArtifacts, CanExchange)
 	EXPECT_EQ(ezren.possession->name, "Headband of intellect");
 }
 
+TEST(ManifestPower, manifests)
+{
+	troy::human patience_kys{};
+	troy::manifest_power(patience_kys, "telekinesis");
+	EXPECT_EQ(patience_kys.own_power->effect, "telekinesis");
+}
+
 } //namespace PowerOfTroy
