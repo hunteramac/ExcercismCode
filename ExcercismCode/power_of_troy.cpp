@@ -16,4 +16,8 @@ namespace troy {
 	{
 		manifestor.own_power = std::make_unique<troy::power>(troy::power{ .effect = power });
 	}
+	void use_power(human& user, human& target)
+	{
+		target.influenced_by = user.own_power;
+;	}
 }  // namespace troy

@@ -70,4 +70,14 @@ TEST(ManifestPower, manifests)
 	EXPECT_EQ(patience_kys.own_power->effect, "telekinesis");
 }
 
+TEST(UsePower, canUse)
+{
+	troy::human edgard_ladrian{};
+	troy::manifest_power(edgard_ladrian, "dampen emotions");
+
+	troy::human vin{};
+	troy::use_power(edgard_ladrian, vin);
+	EXPECT_EQ(vin.influenced_by->effect, "dampen emotions");
+}
+
 } //namespace PowerOfTroy
