@@ -20,7 +20,7 @@ namespace speedywagon {
 
     bool connection_check(pillar_men_sensor* sensor)
     {
-        return false;
+        return sensor;
     }
 
 }  // namespace speedywagon
