@@ -35,6 +35,10 @@
     <ClCompile Include="..\ExcercismCode\power_of_troy.cpp">
       <Filter>source</Filter>
     </ClCompile>
+    <ClCompile Include="Test_SpeedyWagon.cpp" />
+    <ClCompile Include="..\ExcercismCode\speedywagon.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />

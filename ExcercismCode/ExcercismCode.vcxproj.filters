@@ -99,6 +99,9 @@
     <ClCompile Include="power_of_troy.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="speedywagon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="vehicle_purchase.h">
@@ -120,6 +123,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="power_of_troy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="speedywagon.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

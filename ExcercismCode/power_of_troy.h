@@ -23,4 +23,5 @@ namespace troy
 	void exchange_artifacts(std::unique_ptr<artifact>& a, std::unique_ptr<artifact>& b);
 	void manifest_power(human& manifestor, std::string power);
 	void use_power(human& user, human& target);
+	int power_intensity(human& powered);
 } //namespace troy

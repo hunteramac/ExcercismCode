@@ -143,6 +143,7 @@
     <ClCompile Include="pacman_rules.cpp" />
     <ClCompile Include="power_of_troy.cpp" />
     <ClCompile Include="pretendMFCClass.cpp" />
+    <ClCompile Include="speedywagon.cpp" />
     <ClCompile Include="testClass.cpp" />
     <ClCompile Include="testDerivativeClass.cpp" />
     <ClCompile Include="troll_the_trolls.cpp" />
@@ -153,6 +154,7 @@
     <ClInclude Include="lasagna_master.h" />
     <ClInclude Include="power_of_troy.h" />
     <ClInclude Include="pretendMFCClass.h" />
+    <ClInclude Include="speedywagon.h" />
     <ClInclude Include="testClass.h" />
     <ClInclude Include="testDerivativeClass.h" />
     <ClInclude Include="vehicle_purchase.h" />

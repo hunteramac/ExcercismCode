@@ -50,6 +50,9 @@
     <ClCompile Include="..\ExcercismCode\pretendMFCClass.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="..\ExcercismCode\speedywagon.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="..\ExcercismCode\testDerivativeClass.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
@@ -75,6 +78,7 @@
     <ClCompile Include="Test_MakingTheGrade.cpp" />
     <ClCompile Include="Test_PacmanRules.cpp" />
     <ClCompile Include="Test_PowerOfTroy.cpp" />
+    <ClCompile Include="Test_SpeedyWagon.cpp" />
     <ClCompile Include="Test_TrollTheTrolls.cpp" />
     <ClCompile Include="Test_VehiclePurchase.cpp" />
   </ItemGroup>

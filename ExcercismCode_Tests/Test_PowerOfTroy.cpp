@@ -80,4 +80,19 @@ TEST(UsePower, canUse)
 	EXPECT_EQ(vin.influenced_by->effect, "dampen emotions");
 }
 
+TEST(CheckPowerIntensity, canCheck)
+{
+	troy::human sideous{};
+	troy::manifest_power(sideous, "unlimited power");
+
+	EXPECT_EQ(power_intensity(sideous), 1);
+
+	troy::human anakin{};
+	use_power(sideous, anakin);
+
+	EXPECT_EQ(power_intensity(sideous), 2);
+
+	EXPECT_EQ(power_intensity(anakin), 0);
+}
+
 } //namespace PowerOfTroy
