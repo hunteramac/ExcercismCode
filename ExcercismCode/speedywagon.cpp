@@ -4,6 +4,16 @@ namespace speedywagon {
 
     // Enter your code below:
 
+    int activity_counter(const pillar_men_sensor* const sensorArray, int size)
+    {
+        int activityCounter = 0;
+        for (int i = 0; i<size; ++i)
+        {
+            activityCounter += sensorArray[i].activity;
+        }
+        return activityCounter;
+    }
+
     // Please don't change the interface of the uv_light_heuristic function
     int uv_light_heuristic(std::vector<int>* data_array) {
         double avg{};
