@@ -17,4 +17,6 @@ namespace speedywagon {
     int uv_light_heuristic(std::vector<int>* data_array);
     
     bool connection_check(pillar_men_sensor* sensor);
+
+    bool alarm_control(pillar_men_sensor* sensor);
 }  // namespace speedywagon

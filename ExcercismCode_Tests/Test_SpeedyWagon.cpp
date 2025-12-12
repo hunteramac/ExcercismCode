@@ -33,4 +33,27 @@ TEST(ActivityCounter, getsCount2)
 	EXPECT_EQ(speedywagon::activity_counter(sensor_array, 5), 84);
 }
 
+TEST(AlarmControl, ActiveSensor)
+{
+	speedywagon::pillar_men_sensor db{ 1, "Mars", {7,7,7} };
+	speedywagon::pillar_men_sensor db2{ 9008, "Mars", {7,7,7} };
+
+	EXPECT_TRUE(speedywagon::alarm_control(&db));
+	EXPECT_TRUE(speedywagon::alarm_control(&db2));
+}
+
+TEST(AlarmControl, NullptrDoesntCrash)
+{
+	speedywagon::pillar_men_sensor db;
+
+	EXPECT_FALSE(speedywagon::alarm_control(nullptr));
+}
+
+TEST(AlarmControl, ZeroActivity)
+{
+	speedywagon::pillar_men_sensor db{ 0, "Mars", {1,2,3} };
+
+	EXPECT_FALSE(speedywagon::alarm_control(&db));
+}
+
 };
