@@ -43,6 +43,9 @@
     <Filter Include="Source Files\lasagna_master">
       <UniqueIdentifier>{318525a9-4915-4bbb-9b1c-99ebd0758260}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\SpeedyWagon">
+      <UniqueIdentifier>{e81109ea-f4af-4c97-9a81-858cdbba49d8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="numberFunctions.cpp">
@@ -100,7 +103,10 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="speedywagon.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\SpeedyWagon</Filter>
+    </ClCompile>
+    <ClCompile Include="speedywagonUtils.cpp">
+      <Filter>Source Files\SpeedyWagon</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -126,6 +132,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="speedywagon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="speedywagonUtils.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

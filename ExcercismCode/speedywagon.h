@@ -13,10 +13,10 @@ namespace speedywagon {
     };
 
     int activity_counter(const pillar_men_sensor* const sensorArray, int size);
-
-    int uv_light_heuristic(std::vector<int>* data_array);
     
     bool connection_check(pillar_men_sensor* sensor);
 
     bool alarm_control(pillar_men_sensor* sensor);
+
+    bool uv_alarm(pillar_men_sensor* sensor);
 }  // namespace speedywagon
