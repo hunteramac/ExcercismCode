@@ -39,6 +39,9 @@
     <ClCompile Include="..\ExcercismCode\speedywagon.cpp">
       <Filter>source</Filter>
     </ClCompile>
+    <ClCompile Include="..\ExcercismCode\speedywagonUtils.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
