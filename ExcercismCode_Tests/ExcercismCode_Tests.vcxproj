@@ -29,7 +29,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{f453cba1-018a-4df5-bf43-74f20a1d95bd}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
     <ConfigurationType>Application</ConfigurationType>
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
@@ -99,6 +99,7 @@
     <ClCompile Include="Test_MakingTheGrade.cpp" />
     <ClCompile Include="Test_PacmanRules.cpp" />
     <ClCompile Include="Test_PowerOfTroy.cpp" />
+    <ClCompile Include="Test_PowerOfTroy2.cpp" />
     <ClCompile Include="Test_SpeedyWagon.cpp" />
     <ClCompile Include="Test_TrollTheTrolls.cpp" />
     <ClCompile Include="Test_VehiclePurchase.cpp" />
