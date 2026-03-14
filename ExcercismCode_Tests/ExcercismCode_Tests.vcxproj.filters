@@ -39,9 +39,6 @@
     <ClCompile Include="..\ExcercismCode\speedywagon.cpp">
       <Filter>source</Filter>
     </ClCompile>
-    <ClCompile Include="..\ExcercismCode\speedywagonUtils.cpp">
-      <Filter>source</Filter>
-    </ClCompile>
     <ClCompile Include="Test_PowerOfTroy2.cpp" />
   </ItemGroup>
   <ItemGroup>

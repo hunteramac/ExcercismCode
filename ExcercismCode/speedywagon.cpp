@@ -33,7 +33,11 @@ namespace speedywagon {
 
     bool uv_alarm(pillar_men_sensor* sensor)
     {
-        uv_light_heuristic(&sensor->data);
+        if (sensor)
+        {
+            uv_light_heuristic(&sensor->data);
+        }
+        
         return false;
     }
 
