@@ -28,6 +28,33 @@ TEST(CheckSensorConnection, ConnectedSensor)
 	EXPECT_TRUE(speedywagon::connection_check(sensor));
 }
 
+TEST(ActivityCounter, NullPtrArray)
+{
+	EXPECT_EQ(speedywagon::activity_counter(nullptr, 3),0);
+}
+
+TEST(ActivityCounter, uninitializedSensorArray)
+{
+	speedywagon::pillar_men_sensor sensor_array[3];
+	EXPECT_EQ(speedywagon::activity_counter(sensor_array, 3), 0);
+}
+
+TEST(ActivityCounter, handleNegativeAcivity)
+{
+	speedywagon::pillar_men_sensor sensor_array[3] =
+	{ {10}, {-5}, {-5} };
+
+	EXPECT_EQ(speedywagon::activity_counter(sensor_array, 3), 10);
+}
+
+TEST(ActivityCounter, negativeArraySize)
+{
+	speedywagon::pillar_men_sensor sensor_array[3] =
+	{ {10}, {-5}, {-5} };
+
+	EXPECT_EQ(speedywagon::activity_counter(sensor_array, -10), 0);
+}
+
 TEST(ActivityCounter, getsCount1)
 {
 	speedywagon::pillar_men_sensor sensor_array[3] =

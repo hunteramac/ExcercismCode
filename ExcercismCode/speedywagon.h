@@ -12,6 +12,20 @@ namespace speedywagon {
         std::vector<int> data{};
     };
 
+    /// <summary>
+    /// Computes accumulated activity across an array of sensors.
+    /// 
+    /// Negative activity readings are discarded during the operation, user must run scans to check for negative readings using another method.
+    /// Negative activity can still indicate something important (interference, sensor failure... etc)
+    //  Unsigned int for activity from sensors isn't supported by the hardware
+   /// </summary>
+    /// <param name="sensorArray"></param>
+    /// <param name="size"> 
+    ///     Number of elements in the sensor array.
+    ///     Blindly trusted by method - user must provide the correct size to prevent reading outside of memory.
+    ///     Negative size causes no sensors to be proccessed.
+    /// </param>
+    /// <returns></returns>
     int activity_counter(const pillar_men_sensor* const sensorArray, int size);
     
     bool connection_check(pillar_men_sensor* sensor);

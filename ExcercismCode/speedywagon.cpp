@@ -7,10 +7,27 @@ namespace speedywagon {
 
     int activity_counter(const pillar_men_sensor* const sensorArray, int size)
     {
-        int activityCounter = 0;
+        if (!sensorArray)
+            return 0;
+
+        if (size < 0)
+            return 0;
+
+        unsigned int activityCounter = 0;
         for (int i = 0; i<size; ++i)
         {
-            activityCounter += sensorArray[i].activity;
+            // given legacy sensors can have 'negative' activity reports
+            // and unsigned int doesn't appear to be supported.
+            // 
+            // choice between:
+            // 1. discarding the reading <- current safest option. 
+            //      User needs to know about this to perform 'bad reading' via other methods in case these readings matter.
+            //      Ex Detect Pillar men intrusions have taking control of a remote sensor on the network / bad readings from interference. etc 
+            // 2. adding absoloute value - seems incorrect. A negative reading is not going to mean what a positive reading means ever.
+            // 3. summing the negative activity with positive - Danger! Pillar men might exploit this to mask their attacks 
+            //  Eg zero activity reported to control when one sensor had activity and other had negative activity.
+            if(sensorArray[i].activity > 0)
+                activityCounter += sensorArray[i].activity;
         }
         return activityCounter;
     }
