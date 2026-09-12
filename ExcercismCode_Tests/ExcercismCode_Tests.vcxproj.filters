@@ -40,16 +40,20 @@
       <Filter>source</Filter>
     </ClCompile>
     <ClCompile Include="Test_PowerOfTroy2.cpp" />
+    <ClCompile Include="Test_LeapYear.cpp" />
+    <ClCompile Include="..\ExcercismCode\leap.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
     <Filter Include="source">
       <UniqueIdentifier>{c2753f6c-d6a4-4bc2-8a4e-6f90c9e08f86}</UniqueIdentifier>
     </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>

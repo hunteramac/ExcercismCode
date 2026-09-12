@@ -188,6 +188,7 @@
     <ClCompile Include="lasagna.cpp" />
     <ClCompile Include="lasagna_master.cpp" />
     <ClCompile Include="last_will.cpp" />
+    <ClCompile Include="leap.cpp" />
     <ClCompile Include="log_levels.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="making_the_grade.cpp" />
@@ -207,6 +208,7 @@
   <ItemGroup>
     <ClInclude Include="doctor_data.h" />
     <ClInclude Include="lasagna_master.h" />
+    <ClInclude Include="leap.h" />
     <ClInclude Include="power_of_troy.h" />
     <ClInclude Include="pretendMFCClass.h" />
     <ClInclude Include="speedywagon.h" />
