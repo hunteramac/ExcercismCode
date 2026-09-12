@@ -1,10 +1,32 @@
 #include "speedywagon.h"
-#include "speedywagonUtils.h"
 
 namespace speedywagon {
 
-    // Enter your code below:
 
+    /// <summary>
+    /// Appears to finds differences (outliers) in the data and computes a sum based on that.
+    /// </summary>
+    /// <param name="data_array"></param>
+    /// <returns></returns>
+    int uv_light_heuristic(std::vector<int>* data_array) {
+        //if (sensorEnvironment == SensorEnvironment::Test)
+        //{
+        //    // Testing override
+        //    return fakeUvIndexReturn;
+        //}
+        double avg{};
+        for (auto element : *data_array) {
+            avg += element;
+        }
+        avg /= data_array->size();
+        int uv_index{};
+        for (auto element : *data_array) {
+            if (element > avg) ++uv_index;
+        }
+        return uv_index;
+    }
+
+    // Enter your code below:
     int activity_counter(const pillar_men_sensor* const sensorArray, int size)
     {
         if (!sensorArray)
@@ -52,7 +74,7 @@ namespace speedywagon {
     {
         if (sensor)
         {
-            uv_light_heuristic(&sensor->data);
+            return uv_light_heuristic(&sensor->data) > sensor->activity;
         }
         
         return false;

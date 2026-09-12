@@ -104,10 +104,18 @@ TEST(UvAlarm, NullPtr)
 }
 TEST(UvAlarm, LightHeuristicGreaterThanSensorAcitivityLevel)
 {
-	speedywagon::pillar_men_sensor db{ 0, "Mars", {1,2,3} };
-	speedywagon::uv_alarm(&db);
-	EXPECT_EQ(calledXTimes, 1);
-	//EXPECT_EQ(data_array_input,&db.data);
+	//speedywagon::sensorEnvironment = speedywagon::SensorEnvironment::Test;
+
+	speedywagon::pillar_men_sensor db{ 0, "Mars", {10,0,0} };
+	EXPECT_TRUE(speedywagon::uv_alarm(&db));
+}
+
+TEST(UvAlarm, LightHeuristicLessThanSensorAcitivityLevel)
+{
+	//speedywagon::sensorEnvironment = speedywagon::SensorEnvironment::Test;
+
+	speedywagon::pillar_men_sensor db{ 42, "Mars", {10,3,3} };
+	EXPECT_FALSE(speedywagon::uv_alarm(&db));
 }
 
 };

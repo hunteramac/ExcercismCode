@@ -12,6 +12,17 @@ namespace speedywagon {
         std::vector<int> data{};
     };
 
+    //enum class SensorEnvironment
+    //{   
+    //    Production,
+    //    Test
+    //};
+
+    //// a global to disable some functionality in handling
+    //// to make it easier to test with legacy code that can't easily be mocked.
+    //SensorEnvironment sensorEnvironment = SensorEnvironment::Production;
+    //int fakeUvIndexReturn = 0;
+
     /// <summary>
     /// Computes accumulated activity across an array of sensors.
     /// 
