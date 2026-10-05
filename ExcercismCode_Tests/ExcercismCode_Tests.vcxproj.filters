@@ -44,6 +44,10 @@
     <ClCompile Include="..\ExcercismCode\leap.cpp">
       <Filter>source</Filter>
     </ClCompile>
+    <ClCompile Include="Test_ParallelLetterFrequency.cpp" />
+    <ClCompile Include="..\ExcercismCode\parallel_letter_frequency.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />

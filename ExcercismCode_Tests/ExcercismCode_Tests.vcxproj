@@ -56,6 +56,9 @@
     <ClCompile Include="..\ExcercismCode\leap.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="..\ExcercismCode\parallel_letter_frequency.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="..\ExcercismCode\power_of_troy.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug_Test|x64'">NotUsing</PrecompiledHeader>
@@ -97,6 +100,7 @@
     <ClCompile Include="Test_LogLevels.cpp" />
     <ClCompile Include="Test_MakingTheGrade.cpp" />
     <ClCompile Include="Test_PacmanRules.cpp" />
+    <ClCompile Include="Test_ParallelLetterFrequency.cpp" />
     <ClCompile Include="Test_PowerOfTroy.cpp" />
     <ClCompile Include="Test_PowerOfTroy2.cpp" />
     <ClCompile Include="Test_SpeedyWagon.cpp" />

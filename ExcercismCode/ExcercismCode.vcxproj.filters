@@ -49,6 +49,12 @@
     <Filter Include="Source Files\AlienGame">
       <UniqueIdentifier>{f8a2c101-0189-48fb-af3a-b75edbcb32c9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="excercises">
+      <UniqueIdentifier>{f10c3060-a9ce-4a6d-9dc6-012a706feafc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="excercises\parallel-letter-frequency">
+      <UniqueIdentifier>{062f8760-eb8d-4eb5-8351-1851a5bebd54}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="numberFunctions.cpp">
@@ -117,6 +123,9 @@
     <ClCompile Include="leap.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="parallel_letter_frequency.cpp">
+      <Filter>excercises\parallel-letter-frequency</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="vehicle_purchase.h">
@@ -145,6 +154,9 @@
     </ClInclude>
     <ClInclude Include="leap.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="parallel_letter_frequency.h">
+      <Filter>excercises\parallel-letter-frequency</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
